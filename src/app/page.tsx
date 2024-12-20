@@ -5,8 +5,8 @@ import Table from "@/components/table/Table";
 export default function Home() {
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold">~/Edrick-Koda/Portfolio</h1>
       <Art/>
+      <h1 className="mt-4 text-3xl font-bold">~/Edrick-Koda/Portfolio</h1>
        {/* Table Header */}
        <div className="flex items-center gap-2 p-2 text-slate-600 border-b mb-2">
         <span className="flex-1 min-w-[200px] ml-10">Name</span>
