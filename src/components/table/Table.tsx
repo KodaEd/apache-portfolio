@@ -1,15 +1,15 @@
 "use client"
 import TableRow from "@/components/table/TableRow";
-import {Folder, FileText, Code, User, Briefcase, GraduationCap, Github, Mail } from 'lucide-react';
+import {Folder, FileText, Code, User, Briefcase, GraduationCap, Github, Mail, Phone, BriefcaseBusiness } from 'lucide-react';
 
 
 export default function Table() {
   return (
     <>
       <TableRow
-        label="about_me.md"
+        label="about_me"
         icon={User}
-        type="Markdown"
+        type="Directory"
         size="2.4 KB"
         lastModified="Dec 10, 2024"
       >
@@ -85,7 +85,7 @@ export default function Table() {
 
       <TableRow
         label="experience"
-        icon={Folder}
+        icon={BriefcaseBusiness}
         type="Directory"
         size="--"
         lastModified="Dec 11, 2024"
@@ -108,7 +108,7 @@ export default function Table() {
 
       <TableRow
         label="contact"
-        icon={Folder}
+        icon={Phone}
         type="Directory"
         size="--"
         lastModified="Dec 11, 2024"
