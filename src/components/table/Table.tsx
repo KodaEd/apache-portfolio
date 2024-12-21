@@ -1,7 +1,19 @@
-"use client"
-import TableRow from "@/components/table/TableRow";
-import {Folder, FileText, Code, User, Briefcase, GraduationCap, Github, Mail, Phone, BriefcaseBusiness } from 'lucide-react';
+"use client";
 
+import TableRow from "@/components/table/TableRow";
+import WeatherDashboard from "@/components/WeatherDashboard";
+import {
+  Folder,
+  FileText,
+  Code,
+  User,
+  Briefcase,
+  GraduationCap,
+  Github,
+  Mail,
+  Phone,
+  BriefcaseBusiness
+} from 'lucide-react';
 
 export default function Table() {
   return (
@@ -19,6 +31,7 @@ export default function Table() {
           type="JSON"
           size="1.8 KB"
           lastModified="Dec 11, 2024"
+          markdownPath="about/skills.json"
         />
         <TableRow
           label="education.md"
@@ -26,6 +39,7 @@ export default function Table() {
           type="Markdown"
           size="1.2 KB"
           lastModified="Dec 09, 2024"
+          markdownPath="about/education.md"
         />
       </TableRow>
 
@@ -45,40 +59,20 @@ export default function Table() {
           lastModified="Dec 11, 2024"
         >
           <TableRow
-            label="react_projects"
+            label="weather_dashboard.html"
             icon={Code}
-            type="Directory"
-            size="--"
+            type="HTML"
+            size="4.5 KB"
             lastModified="Dec 11, 2024"
+            content={WeatherDashboard}
           />
           <TableRow
-            label="full_stack_apps"
-            icon={Code}
-            type="Directory"
-            size="--"
+            label="project_notes.md"
+            icon={FileText}
+            type="Markdown"
+            size="2.1 KB"
             lastModified="Dec 10, 2024"
-          />
-        </TableRow>
-        <TableRow
-          label="algorithms"
-          icon={Folder}
-          type="Directory"
-          size="--"
-          lastModified="Dec 09, 2024"
-        >
-          <TableRow
-            label="data_structures.py"
-            icon={FileText}
-            type="Python"
-            size="4.2 KB"
-            lastModified="Dec 08, 2024"
-          />
-          <TableRow
-            label="sorting.cpp"
-            icon={FileText}
-            type="C++"
-            size="3.1 KB"
-            lastModified="Dec 07, 2024"
+            markdownPath="projects/project_notes.md"
           />
         </TableRow>
       </TableRow>
@@ -96,6 +90,7 @@ export default function Table() {
           type="Markdown"
           size="3.5 KB"
           lastModified="Dec 10, 2024"
+          markdownPath="experience/internships.md"
         />
         <TableRow
           label="work_history.json"
@@ -103,6 +98,7 @@ export default function Table() {
           type="JSON"
           size="2.8 KB"
           lastModified="Dec 09, 2024"
+          markdownPath="experience/work_history.json"
         />
       </TableRow>
 
@@ -119,6 +115,7 @@ export default function Table() {
           type="Link"
           size="--"
           lastModified="Dec 11, 2024"
+          link="https://github.com/edrick-koda"
         />
         <TableRow
           label="email"
@@ -126,6 +123,7 @@ export default function Table() {
           type="Link"
           size="--"
           lastModified="Dec 11, 2024"
+          link="mailto:contact@edrickkoda.com"
         />
       </TableRow>
     </>

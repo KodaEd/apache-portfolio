@@ -1,0 +1,25 @@
+{
+    "programming_languages": [
+      "JavaScript/TypeScript",
+      "Python",
+      "C++",
+      "Java"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "AWS",
+      "Linux"
+    ]
+  }
