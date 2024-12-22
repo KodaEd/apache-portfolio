@@ -5,12 +5,10 @@ import {
   FileText,
   Code,
   User,
-  Briefcase,
   GraduationCap,
   Github,
   Mail,
   Phone,
-  BriefcaseBusiness,
   Linkedin,
   Scroll,
 } from "lucide-react";
