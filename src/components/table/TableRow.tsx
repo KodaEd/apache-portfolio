@@ -1,10 +1,10 @@
-'use client';
-
-import React, { useState, useEffect } from "react";
+"use client"
+import React, { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import Modal, { RetroButton } from "../Modal";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 interface DirectoryItemProps {
   label: string;
@@ -15,7 +15,6 @@ interface DirectoryItemProps {
   size?: string;
   type?: string;
   content?: string | React.ComponentType;
-  markdownPath?: string;  // New prop for markdown file path
   link?: string;
 }
 
@@ -28,63 +27,43 @@ const DirectoryItem: React.FC<DirectoryItemProps> = ({
   size,
   type,
   content,
-  markdownPath,
   link
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const [showModal, setShowModal] = useState(false);
-  const [markdownContent, setMarkdownContent] = useState<string>('');
   const hasChildren = children && React.Children.count(children) > 0;
-
-  useEffect(() => {
-    if (markdownPath && showModal) {
-      fetch(`/api/markdown?path=${encodeURIComponent(markdownPath)}`)
-        .then(res => res.text())
-        .then(content => setMarkdownContent(content))
-        .catch(console.error);
-    }
-  }, [markdownPath, showModal]);
 
   const handleClick = () => {
     if (hasChildren) {
       setIsOpen(!isOpen);
     } else if (link) {
       window.open(link, '_blank');
-    } else if (content || markdownPath) {
+    } else if (content) {
       setShowModal(true);
     }
   };
 
   const renderContent = () => {
-    if (!content && !markdownContent) return null;
+    if (!content) return null;
 
     switch (type) {
       case "JSON":
+      case "Python":
+      case "C++":
         return (
           <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
             <code>{content as string}</code>
           </pre>
         );
       
-      case "Python":
-      case "C++":
-      case "TypeScript":
-      case "JavaScript":
-        return (
-          <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
-            <code className={`language-${type.toLowerCase()}`}>
-              {content as string}
-            </code>
-          </pre>
-        );
-      
       case "Markdown":
-        const markdownToRender = markdownPath ? markdownContent : (content as string);
         return (
           <div className="prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
               components={{
+                // Customize markdown components if needed
                 h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-4" {...props} />,
                 h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-3" {...props} />,
                 h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2" {...props} />,
@@ -92,23 +71,17 @@ const DirectoryItem: React.FC<DirectoryItemProps> = ({
                 ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-4" {...props} />,
                 ol: ({node, ...props}) => <ol className="list-decimal pl-6 mb-4" {...props} />,
                 li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                code: ({node, inline, className, children, ...props}) => {
-                  const match = /language-(\w+)/.exec(className || '');
-                  return !inline ? (
-                    <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
-                      <code className={className} {...props}>
-                        {children}
-                      </code>
-                    </pre>
+                code: ({node, inline, ...props}) => 
+                  inline ? (
+                    <code className="bg-gray-100 px-1 rounded" {...props} />
                   ) : (
-                    <code className="bg-gray-100 px-1 rounded" {...props}>
-                      {children}
-                    </code>
-                  );
-                }
+                    <pre className="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
+                      <code {...props} />
+                    </pre>
+                  )
               }}
             >
-              {markdownToRender}
+              {content as string}
             </ReactMarkdown>
           </div>
         );
@@ -155,6 +128,7 @@ const DirectoryItem: React.FC<DirectoryItemProps> = ({
         </div>
       </div>
 
+      {/* Modal */}
       <Modal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
