@@ -281,7 +281,7 @@ The application follows a modern microservices architecture with the following c
           type="Link"
           size="--"
           lastModified="Dec 11, 2024"
-          link="www.linkedin.com/in/koda-edrick-aa52a0237"
+          link="https://linkedin.com/in/koda-edrick-aa52a0237"
         />
         <TableRow
           label="github"
