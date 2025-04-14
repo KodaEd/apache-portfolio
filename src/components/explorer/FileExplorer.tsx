@@ -18,7 +18,7 @@ const FileExplorer: React.FC = () => {
 
       {/* Table Rows */}
       <div>
-        {fileItems.map((item) => (
+        {Object.values(fileItems).map((item) => (
           <FileRow key={item.id} item={item} />
         ))}
       </div>

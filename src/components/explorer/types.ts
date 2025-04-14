@@ -22,5 +22,5 @@ export interface FileItem {
   link?: string;
   defaultOpen?: boolean;
   content?: React.ReactNode;
-  children?: FileItem[];
+  children?:Record<string, FileItem>;
 }

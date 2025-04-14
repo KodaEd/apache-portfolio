@@ -7,7 +7,8 @@
     "inspect": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

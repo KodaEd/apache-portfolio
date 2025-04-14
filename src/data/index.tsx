@@ -14,7 +14,8 @@ const combinedItems: Record<string, FileItem> = {
 };
 
 // Transform into array format for the FileExplorer component
-export const fileItems: FileItem[] = createFileItems(combinedItems);
+export const fileItems: Record<string, FileItem> =
+  createFileItems(combinedItems);
 
 // Export individual sections for more granular use if needed
 export { aboutItems, projectItems, workItems, contactItems };

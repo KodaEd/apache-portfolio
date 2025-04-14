@@ -1,4 +1,4 @@
-import { Folder, FileText } from "lucide-react";
+import { Folder } from "lucide-react";
 import { FileItem } from "@/components/explorer/types";
 
 const PlaceholderContent = () => (

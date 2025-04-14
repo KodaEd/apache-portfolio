@@ -24,7 +24,7 @@ const FileRow: React.FC<FileRowProps> = ({ item, level = 0 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const [showContent, setShowContent] = useState(false);
 
-  const hasChildren = children && children.length > 0;
+  const hasChildren = children && Object.keys(children).length > 0;
   const hasContent = !!content;
 
   const handleClick = () => {
@@ -77,7 +77,7 @@ const FileRow: React.FC<FileRowProps> = ({ item, level = 0 }) => {
       {/* Directory children */}
       {isOpen && hasChildren && (
         <div className="ml-4 border-l border-slate-200">
-          {children.map((child) => (
+          {Object.values(children).map((child) => (
             <FileRow key={child.id} item={child} level={level + 1} />
           ))}
         </div>
