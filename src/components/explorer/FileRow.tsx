@@ -21,11 +21,12 @@ const FileRow: React.FC<FileRowProps> = ({ item, level = 0 }) => {
     children,
   } = item;
 
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-  const [showContent, setShowContent] = useState(false);
-
   const hasChildren = children && Object.keys(children).length > 0;
   const hasContent = !!content;
+
+  // Set initial states based on defaultOpen
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [showContent, setShowContent] = useState(defaultOpen && hasContent);
 
   const handleClick = () => {
     if (hasChildren) {
@@ -46,7 +47,7 @@ const FileRow: React.FC<FileRowProps> = ({ item, level = 0 }) => {
         <div className="flex items-center gap-2 flex-1 min-w-0">
           {/* Arrow indicator for expandable items */}
           {hasChildren || hasContent ? (
-            isOpen || showContent ? (
+            (isOpen && hasChildren) || (showContent && hasContent) ? (
               <ChevronDown className="w-4 h-4 flex-shrink-0" />
             ) : (
               <ChevronRight className="w-4 h-4 flex-shrink-0" />
