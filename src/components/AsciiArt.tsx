@@ -1,8 +1,7 @@
 export default function Art() {
   return (
     <pre
-      className="font-mono text-xs md:text-sm whitespace-pre"
-      style={{ lineHeight: "1", overflowX: "auto" }}
+      className="font-mono text-xs whitespace-pre leading-none"
     >
       {`░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░▒▓█▓█▓█▓▓▓▓▒░░░░░░░░░░░░░░░
