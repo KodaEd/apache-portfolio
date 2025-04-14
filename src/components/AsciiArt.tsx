@@ -1,8 +1,8 @@
 export default function Art() {
   return (
     <pre
-      className="font-mono overflow-auto w-full h-full text-xs"
-      style={{ lineHeight: "1" }}
+      className="font-mono text-xs md:text-sm whitespace-pre"
+      style={{ lineHeight: "1", overflowX: "auto" }}
     >
       {`░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░▒▓█▓█▓█▓▓▓▓▒░░░░░░░░░░░░░░░
