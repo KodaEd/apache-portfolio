@@ -65,7 +65,7 @@ const FileRow: React.FC<FileRowProps> = ({ item, level = 0 }) => {
         </div>
 
         {/* File information - made responsive */}
-        <div className="hidden sm:flex gap-4 md:gap-8 text-sm text-slate-500">
+        <div className="hidden sm:flex gap-4 md:gap-8 text-sm">
           <span className="w-16 md:w-24 truncate">{type}</span>
           <span className="w-16 md:w-24 text-right truncate">
             {size || "--"}
