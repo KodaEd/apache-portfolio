@@ -12,7 +12,7 @@ export default function Home() {
       </div>
 
       {/* Header section with responsive layout */}
-      <div className="mt-4 flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="mt-4 flex flex-col justify-start gap-x-5 md:flex-row md:items-center">
         <h1 className="text-2xl md:text-3xl font-bold">
           ~/Edrick-Koda/Portfolio
         </h1>
@@ -39,7 +39,7 @@ export default function Home() {
       </div>
 
       {/* File Explorer */}
-      <div className="mt-6 overflow-x-auto">
+      <div className="mt-2 overflow-x-auto">
         <FileExplorer />
       </div>
 
