@@ -4,7 +4,6 @@ import { FileItem } from "@/components/explorer/types";
 import ComingSoonStub from "@/components/ComingSoonStub";
 import GloomStudios from "./gloom_studios";
 import WePrintProject from "./we_print";
-import SydneyScholarsProject from "./sydney_scholars";
 
 export const workItems: Record<string, FileItem> = {
   work_experience: {
