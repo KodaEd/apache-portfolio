@@ -1,105 +1,166 @@
-// src/components/work/gloom_studios.tsx
-import React from "react";
-import WorkExperienceItem from "@/components/explorer/FileWorkExperience";
-import type { WorkExperienceProps } from "@/components/explorer/FileWorkExperience";
-
-const gloomStudiosData: WorkExperienceProps = {
-  company: {
-    name: "Gloom.Studio",
-    logo: "/images/work/gloom-studios/logo.png", // Placeholder, replace with actual path
-    description:
-      "A web agency specializing in creating custom solutions for unique business problems. Founded in 2024, Gloom.Studio focuses on delivering high-quality web applications with exceptional user experiences.",
-    industry: "Web Development Agency",
-    // website: "https://gloom.studio", // Replace with actual website
-  },
-  role: {
-    title: "Co-Founder & Software Developer",
-    period: "August 2024 - Present",
-    teamSize: 3,
-    responsibilities: [
-      {
-        title: "Business Problem Translation",
-        description:
-          "Translate complex non-technical client requirements by identifying underlying business problems and converting ambiguous requests into technical specifications through user journey mapping and interactive prototyping.",
-      },
-      {
-        title: "Development Standards Implementation",
-        description:
-          "Established comprehensive development standards with structured PR conventions and feature demonstration Loom videos, eliminating unnecessary review meetings and significantly reducing time-to-approval for new features.",
-      },
-      {
-        title: "Team Leadership",
-        description:
-          "Led full-stack development team using Agile methodologies, implementing structured Jira workflows for issue tracking while strategically delegating tasks based on team strengths and growth opportunities to meet tight client deadlines.",
-      },
-      {
-        title: "Client Relationship Management",
-        description:
-          "Maintained regular client communication through weekly updates and clearly defined expectations, ensuring alignment between technical development and business goals.",
-      },
-    ],
-    keyLearning:
-      "Balancing technical excellence with business needs requires clear communication standards and effective delegation strategies.",
-  },
-  // project: {
-  // problem:
-  //   "Clients were struggling to articulate their technical needs, resulting in misaligned expectations and project scope creep. Additionally, development workflows lacked standardization, leading to inconsistent code quality and inefficient review processes.",
-  // solution:
-  //   "Implemented a structured approach to client requirement gathering, including user journey mapping and interactive prototyping to visualize solutions before development. Created comprehensive development standards and workflow automation to streamline collaboration.",
-  // approach:
-  //   "Utilized a combination of technical and communication strategies: establishing Jira workflows for issue tracking, creating PR naming conventions with Loom video demonstrations, and implementing regular client check-ins with clear expectations for the following sprint.",
-  // images: [
-  //   "/images/work/gloom-jira-workflow.png", // Placeholder, replace with actual path
-  //   "/images/work/gloom-pr-example.png", // Placeholder, replace with actual path
-  //   "/images/work/gloom-client-dashboard.png", // Placeholder, replace with actual path
-  // ],
-  // },
-  impact: {
-    metrics: [
-      {
-        label: "Reduction in Review Time",
-        value: "60%",
-        description:
-          "Decreased time spent in code reviews through PR conventions and Loom video demonstrations",
-      },
-      {
-        label: "Client Satisfaction",
-        value: "95%",
-        description:
-          "Based on post-project satisfaction surveys measuring alignment with business goals",
-      },
-      {
-        label: "Team Productivity",
-        value: "+40%",
-        description:
-          "Increased story point completion per sprint after implementing structured workflows",
-      },
-    ],
-    testimonial: {
-      quote:
-        "The team at Gloom.Studio transformed our vague idea into a concrete solution that exceeded our expectations. Their ability to understand our business needs and translate them into technical solutions was impressive.",
-      author: "Alex Mercer",
-      role: "CEO, ClientCompany",
-    },
-    lessonsLearned:
-      "The most effective technical solutions come from deeply understanding the business problem first. Creating structured processes for both client communication and development workflows pays dividends in both efficiency and project outcomes.",
-  },
-  techStack: [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "Express",
-    "PostgreSQL",
-    "AWS S3",
-    "Jira",
-    "Docker",
-  ],
-};
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Calendar, Users } from "lucide-react";
+import Image from "next/image";
 
 const GloomStudios: React.FC = () => {
-  return <WorkExperienceItem {...gloomStudiosData} />;
+  return (
+    <div className="space-y-4 py-6">
+      {/* Company Overview Section */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="h-16 w-16 rounded-md bg-gray-100 flex items-center justify-center overflow-hidden">
+              <Image
+                width={100}
+                height={100}
+                src="/images/work/gloom-studios/logo.png"
+                alt="Gloom.Studio logo"
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold">Gloom.Studio</h2>
+              <p>Web Development Agency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Role Section */}
+      <Card>
+        <CardHeader>
+          <div className="flex justify-between items-center">
+            <CardTitle className="text-xl font-semibold">
+              Co-Founder & Software Developer
+            </CardTitle>
+            <div className="flex items-center space-x-1">
+              <Calendar size={16} />
+              <span className="text-sm">August 2024 - Present</span>
+            </div>
+          </div>
+          <CardDescription className="flex items-center space-x-1">
+            <Users size={16} />
+            <span>Team of 3</span>
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="space-y-3">
+              <h3 className="font-medium text-lg">Responsibilities</h3>
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <h4 className="font-medium">Business Problem Translation</h4>
+                  <p>
+                    Translate complex non-technical client requirements by
+                    identifying underlying business problems and converting
+                    ambiguous requests into technical specifications through
+                    user journey mapping and interactive prototyping.
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-medium">
+                    Development Standards Implementation
+                  </h4>
+                  <p>
+                    Established comprehensive development standards with
+                    structured PR conventions and feature demonstration Loom
+                    videos, eliminating unnecessary review meetings and
+                    significantly reducing time-to-approval for new features.
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-medium">Team Leadership</h4>
+                  <p>
+                    Led full-stack development team using Agile methodologies,
+                    implementing structured Jira workflows for issue tracking
+                    while strategically delegating tasks based on team strengths
+                    and growth opportunities to meet tight client deadlines.
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-medium">
+                    Client Relationship Management
+                  </h4>
+                  <p>
+                    Maintained regular client communication through weekly
+                    updates and clearly defined expectations, ensuring alignment
+                    between technical development and business goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
+              <h4 className="font-medium text-blue-800">Key Learning</h4>
+              <p className="text-blue-700">
+                Balancing technical excellence with business needs requires
+                clear communication standards and effective delegation
+                strategies.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Impact Section */}
+      <div className="space-y-6">
+        <h3 className="text-xl font-semibold">Impact & Results</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Card className="overflow-hidden">
+            <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
+            <CardContent className="pt-6">
+              <div className="text-3xl font-bold">60%</div>
+              <div className="text-lg font-medium mt-2">
+                Reduction in Review Time
+              </div>
+              <p className="mt-2 text-sm">
+                Decreased time spent in code reviews through PR conventions and
+                Loom video demonstrations
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="overflow-hidden">
+            <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
+            <CardContent className="pt-6">
+              <div className="text-3xl font-bold">95%</div>
+              <div className="text-lg font-medium mt-2">
+                Client Satisfaction
+              </div>
+              <p className="mt-2 text-sm">
+                Based on post-project satisfaction surveys measuring alignment
+                with business goals
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="overflow-hidden">
+            <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
+            <CardContent className="pt-6">
+              <div className="text-3xl font-bold">+40%</div>
+              <div className="text-lg font-medium mt-2">Team Productivity</div>
+              <p className="mt-2 text-sm">
+                Increased story point completion per sprint after implementing
+                structured workflows
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+          <h4 className="font-medium mb-2">Lessons Learned</h4>
+          <p>
+            The most effective technical solutions come from deeply
+            understanding the business problem first. Creating structured
+            processes for both client communication and development workflows
+            pays dividends in both efficiency and project outcomes.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default GloomStudios;
