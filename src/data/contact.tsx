@@ -1,4 +1,4 @@
-import { Phone, Linkedin, Github, Mail } from "lucide-react";
+import { Phone, Linkedin, Github, Mail, FileText } from "lucide-react";
 import { FileItem } from "@/components/explorer/types";
 
 export const contactItems: Record<string, FileItem> = {
@@ -11,6 +11,15 @@ export const contactItems: Record<string, FileItem> = {
     lastModified: "Dec 11, 2024",
     defaultOpen: true,
     children: {
+      resume: {
+        id: "contact/resume",
+        label: "resume",
+        icon: FileText,
+        type: "Link",
+        size: "--",
+        lastModified: "16 April, 2025",
+        link: "/resume.pdf",
+      },
       linkedin: {
         id: "contact/linkedin",
         label: "linkedin",
