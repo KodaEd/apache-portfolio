@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 // Reusable content definitions
@@ -46,24 +47,15 @@ const ProcessFlowSection: React.FC = () => {
           <ContentList items={content.challenge} />
         </div>
 
-        {/* SVG Slot - Horizontal */}
+        {/* Right Arrow 1 (Horizontal) */}
         <div className="flex items-center justify-center w-16 h-16">
-          <svg
-            width="64"
-            height="24"
-            viewBox="0 0 64 24"
-            className="text-blue-500"
-          >
-            <path
-              d="M2,12 H54 M48,4 L62,12 L48,20"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="3 3"
-            />
-          </svg>
+          <Image
+            width={64}
+            height={48}
+            src="/right-arrow-1.svg"
+            alt="Right arrow"
+            className="w-16 h-12"
+          />
         </div>
 
         {/* Approach Card */}
@@ -74,24 +66,15 @@ const ProcessFlowSection: React.FC = () => {
           <ContentList items={content.approach} />
         </div>
 
-        {/* SVG Slot - Horizontal */}
+        {/* Right Arrow 2 (Horizontal) */}
         <div className="flex items-center justify-center w-16 h-16">
-          <svg
-            width="64"
-            height="24"
-            viewBox="0 0 64 24"
-            className="text-blue-500"
-          >
-            <path
-              d="M2,12 H54 M48,4 L62,12 L48,20"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="3 3"
-            />
-          </svg>
+          <Image
+            width={64}
+            height={48}
+            src="/right-arrow-2.svg"
+            alt="Right arrow"
+            className="w-16 h-12 rotate-45"
+          />
         </div>
 
         {/* Solution Card */}
@@ -113,24 +96,15 @@ const ProcessFlowSection: React.FC = () => {
           <ContentList items={content.challenge} />
         </div>
 
-        {/* SVG Slot - Vertical */}
+        {/* Down Arrow (Rotated Right Arrow 1) */}
         <div className="flex justify-center h-16">
-          <svg
-            width="24"
-            height="64"
-            viewBox="0 0 24 64"
-            className="text-blue-500"
-          >
-            <path
-              d="M12,2 V54 M4,48 L12,62 L20,48"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="3 3"
-            />
-          </svg>
+          <Image
+            width={64}
+            height={48}
+            src="/right-arrow-1.svg"
+            alt="Down arrow"
+            className="w-12 h-16 transform rotate-90"
+          />
         </div>
 
         {/* Approach Card */}
@@ -141,24 +115,15 @@ const ProcessFlowSection: React.FC = () => {
           <ContentList items={content.approach} />
         </div>
 
-        {/* SVG Slot - Vertical */}
+        {/* Down Arrow (Rotated Right Arrow 2) */}
         <div className="flex justify-center h-16">
-          <svg
-            width="24"
-            height="64"
-            viewBox="0 0 24 64"
-            className="text-blue-500"
-          >
-            <path
-              d="M12,2 V54 M4,48 L12,62 L20,48"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="3 3"
-            />
-          </svg>
+          <Image
+            width={64}
+            height={48}
+            src="/right-arrow-2.svg"
+            alt="Down arrow"
+            className="w-12 h-16 transform rotate-[135deg] "
+          />
         </div>
 
         {/* Solution Card */}

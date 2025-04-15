@@ -49,7 +49,6 @@ const WePrintProject: React.FC = () => {
             "/images/work/we-print/SS1.jpg",
             "/images/work/we-print/SS2.jpg",
             "/images/work/we-print/SS3.jpg",
-            "/images/work/we-print/SS4.jpg",
           ]}
         />
       </div>
