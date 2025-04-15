@@ -44,7 +44,7 @@ export const workItems: Record<string, FileItem> = {
         size: "2.5 KB",
         defaultOpen: true,
         lastModified: "March 15, 2025",
-        content: <SydneyScholarsProject />,
+        content: <ComingSoonStub />,
       },
       cv_medan_mas_karimun: {
         id: "work_experience/cv_medan_mas_karimun",

@@ -1,4 +1,3 @@
-// src/data/work/we_print.tsx
 import React from "react";
 import {
   Card,
@@ -10,6 +9,7 @@ import {
 import { Calendar, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
 import ProjectImageCarousel from "@/components/ImageCarousel";
+import ProcessFlowSection from "./flow"; // Import the new component
 
 const WePrintProject: React.FC = () => {
   return (
@@ -33,10 +33,10 @@ const WePrintProject: React.FC = () => {
             </div>
           </div>
           <a
-            href="https://we-print.example.com"
+            href="https://we-print-frontend-staging.up.railway.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-1 text-blue-600 hover:text-blue-800"
+            className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 text-bold text-xl font-bold"
           >
             <span>Visit</span>
             <ExternalLink size={16} />
@@ -118,62 +118,12 @@ const WePrintProject: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-              <h4 className="font-bold text-lg text-blue-800">Key Learning</h4>
-              <p className="text-blue-700">
-                Sometimes the most effective technical solutions are the
-                simplest ones. Adding skeleton loading states had more impact on
-                perceived performance than complex backend optimizations.
-              </p>
-            </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Project Section */}
-      <div className="space-y-4">
-        <h3 className="text-2xl font-bold">Custom Print Editor Platform</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">The Challenge</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                We-Print&apos;s competitors had online editors, but they were
-                complex and confusing for users, leading to abandoned carts and
-                frustrated customers. The client needed a simplified solution
-                that maintained all necessary functionality while providing a
-                more intuitive experience.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">Our Solution</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Developed an intuitive e-commerce platform with an integrated
-                web-based editor that allows customers to design, customize, and
-                order print products through a streamlined interface with
-                minimal clutter.
-              </p>
-            </CardContent>
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">The Approach</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Adopted a user-centered design approach with rapid prototyping
-                and testing cycles. Focused on reducing UI complexity while
-                maintaining full functionality, and implemented strategic
-                loading states to improve perceived performance.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+      {/* Project Section - Now using ProcessFlowSection */}
+      <ProcessFlowSection />
 
       {/* Impact Section */}
       <div className="space-y-6">
@@ -216,13 +166,13 @@ const WePrintProject: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          <h4 className="font-bold text-xl mb-2">Lessons Learned</h4>
-          <p>
-            User perception is just as important as actual performance metrics.
-            The project reinforced that reducing UI complexity and adding
-            thoughtful loading states can dramatically improve user
-            satisfaction, sometimes more than backend optimizations.
+        <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
+          <h4 className="font-bold text-lg text-blue-800">Lessons Learned</h4>
+          <p className="text-blue-700">
+            The most effective technical solutions come from deeply
+            understanding the business problem first. Creating structured
+            processes for both client communication and development workflows
+            pays dividends in both efficiency and project outcomes.
           </p>
         </div>
       </div>
