@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -36,7 +36,7 @@ export interface WorkExperienceProps {
     responsibilities: Responsibility[];
     keyLearning?: string;
   };
-  project: {
+  project?: {
     name?: string;
     problem?: string;
     solution?: string;
@@ -60,7 +60,7 @@ const WorkExperienceItem: React.FC<WorkExperienceProps> = ({
   role,
   project,
   impact,
-  techStack,
+  // techStack,
 }) => {
   return (
     <div className="space-y-4 py-6">
