@@ -6,7 +6,7 @@ import type { WorkExperienceProps } from "@/components/explorer/FileWorkExperien
 const wePrintData: WorkExperienceProps = {
   company: {
     name: "We-Print",
-    logo: "/images/work/we-print-logo.png", // Placeholder, replace with actual path
+    logo: "/images/work/we-print/logo.png", // Placeholder, replace with actual path
     description:
       "A printing company specializing in custom print materials for businesses and individuals. We-Print sought to improve their online ordering system to stay competitive in the digital printing market.",
     industry: "Printing Services",
@@ -50,9 +50,10 @@ const wePrintData: WorkExperienceProps = {
     approach:
       "Adopted a user-centered design approach with rapid prototyping and testing cycles. Focused on reducing UI complexity while maintaining full functionality, and implemented strategic loading states to improve perceived performance.",
     images: [
-      "/images/work/we-print-editor.png", // Placeholder, replace with actual path
-      "/images/work/we-print-mobile.png", // Placeholder, replace with actual path
-      "/images/work/we-print-checkout.png", // Placeholder, replace with actual path
+      "/images/work/we-print/SS1.jpg",
+      "/images/work/we-print/SS2.jpg",
+      "/images/work/we-print/SS3.jpg",
+      "/images/work/we-print/SS4.jpg",
     ],
   },
   impact: {

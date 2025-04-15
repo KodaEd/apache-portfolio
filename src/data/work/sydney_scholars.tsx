@@ -6,7 +6,7 @@ import type { WorkExperienceProps } from "@/components/explorer/FileWorkExperien
 const sydneyScholarsData: WorkExperienceProps = {
   company: {
     name: "Sydney Scholars",
-    logo: "/images/work/sydney-scholars-logo.png", // Placeholder, replace with actual path
+    logo: "/images/work/sydney-scholars/logo.png", // Placeholder, replace with actual path
     description:
       "An educational institution providing tutoring and academic support services to students. Sydney Scholars needed to modernize their student reporting system to improve efficiency and communication between tutors, administrators, and parents.",
     industry: "Education",

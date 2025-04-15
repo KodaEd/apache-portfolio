@@ -6,7 +6,7 @@ import type { WorkExperienceProps } from "@/components/explorer/FileWorkExperien
 const gloomStudiosData: WorkExperienceProps = {
   company: {
     name: "Gloom.Studio",
-    logo: "/images/work/gloom-logo.png", // Placeholder, replace with actual path
+    logo: "/images/work/gloom-studios/logo.png", // Placeholder, replace with actual path
     description:
       "A web agency specializing in creating custom solutions for unique business problems. Founded in 2024, Gloom.Studio focuses on delivering high-quality web applications with exceptional user experiences.",
     industry: "Web Development Agency",
@@ -42,17 +42,17 @@ const gloomStudiosData: WorkExperienceProps = {
       "Balancing technical excellence with business needs requires clear communication standards and effective delegation strategies.",
   },
   // project: {
-    // problem:
-    //   "Clients were struggling to articulate their technical needs, resulting in misaligned expectations and project scope creep. Additionally, development workflows lacked standardization, leading to inconsistent code quality and inefficient review processes.",
-    // solution:
-    //   "Implemented a structured approach to client requirement gathering, including user journey mapping and interactive prototyping to visualize solutions before development. Created comprehensive development standards and workflow automation to streamline collaboration.",
-    // approach:
-    //   "Utilized a combination of technical and communication strategies: establishing Jira workflows for issue tracking, creating PR naming conventions with Loom video demonstrations, and implementing regular client check-ins with clear expectations for the following sprint.",
-    // images: [
-    //   "/images/work/gloom-jira-workflow.png", // Placeholder, replace with actual path
-    //   "/images/work/gloom-pr-example.png", // Placeholder, replace with actual path
-    //   "/images/work/gloom-client-dashboard.png", // Placeholder, replace with actual path
-    // ],
+  // problem:
+  //   "Clients were struggling to articulate their technical needs, resulting in misaligned expectations and project scope creep. Additionally, development workflows lacked standardization, leading to inconsistent code quality and inefficient review processes.",
+  // solution:
+  //   "Implemented a structured approach to client requirement gathering, including user journey mapping and interactive prototyping to visualize solutions before development. Created comprehensive development standards and workflow automation to streamline collaboration.",
+  // approach:
+  //   "Utilized a combination of technical and communication strategies: establishing Jira workflows for issue tracking, creating PR naming conventions with Loom video demonstrations, and implementing regular client check-ins with clear expectations for the following sprint.",
+  // images: [
+  //   "/images/work/gloom-jira-workflow.png", // Placeholder, replace with actual path
+  //   "/images/work/gloom-pr-example.png", // Placeholder, replace with actual path
+  //   "/images/work/gloom-client-dashboard.png", // Placeholder, replace with actual path
+  // ],
   // },
   impact: {
     metrics: [

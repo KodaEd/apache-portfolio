@@ -1,5 +1,4 @@
 import React from "react";
-// import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -9,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Calendar, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
+import ProjectImageCarousel from "../ImageCarousel";
 
 export interface Metric {
   label: string;
@@ -96,23 +96,10 @@ const WorkExperienceItem: React.FC<WorkExperienceProps> = ({
             </a>
           )}
         </div>
-        {project && project.images && project.images.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-            {project.images.map((image, index) => (
-              <div
-                key={index}
-                className="h-48 rounded-lg overflow-hidden bg-gray-100"
-              >
-                <Image
-                  width={100}
-                  height={100}
-                  src={image}
-                  alt={`Project screenshot ${index + 1}`}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+
+        {/* Project Images Carousel */}
+        {project && project.images && (
+          <ProjectImageCarousel images={project.images} />
         )}
       </div>
 
@@ -202,31 +189,18 @@ const WorkExperienceItem: React.FC<WorkExperienceProps> = ({
                 <div className="text-3xl font-bold">{metric.value}</div>
                 <div className="text-lg font-medium mt-2">{metric.label}</div>
                 {metric.description && (
-                  <p className=" mt-2 text-sm">{metric.description}</p>
+                  <p className="mt-2 text-sm">{metric.description}</p>
                 )}
               </CardContent>
             </Card>
           ))}
         </div>
-        {/* {impact.testimonial && (
-          <Card className="border-l-4 border-l-blue-500">
-            <CardContent className="py-6">
-              <blockquote className="italic ">
-                &quot;{impact.testimonial.quote}&quot;
-              </blockquote>
-              <div className="mt-4">
-                <div className="font-medium">{impact.testimonial.author}</div>
-                <div className=" text-sm">{impact.testimonial.role}</div>
-              </div>
-            </CardContent>
-          </Card>
-        )}
         {impact.lessonsLearned && (
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
             <h4 className="font-medium mb-2">Lessons Learned</h4>
             <p>{impact.lessonsLearned}</p>
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );
