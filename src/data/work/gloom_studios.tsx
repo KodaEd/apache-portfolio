@@ -52,19 +52,21 @@ const GloomStudios: React.FC = () => {
         <CardContent>
           <div className="space-y-4">
             <div className="space-y-3">
-              <h3 className="font-medium text-lg">Responsibilities</h3>
-              <div className="space-y-4">
-                <div className="space-y-1">
-                  <h4 className="font-medium">Business Problem Translation</h4>
+              <h3 className="font-bold text-2xl">Responsibilities</h3>
+              <ul className="space-y-4 list-disc pl-5">
+                <li>
+                  <h4 className="font-semibold text-lg">
+                    Business Problem Translation
+                  </h4>
                   <p>
                     Translate complex non-technical client requirements by
                     identifying underlying business problems and converting
                     ambiguous requests into technical specifications through
                     user journey mapping and interactive prototyping.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">
                     Development Standards Implementation
                   </h4>
                   <p>
@@ -73,18 +75,18 @@ const GloomStudios: React.FC = () => {
                     videos, eliminating unnecessary review meetings and
                     significantly reducing time-to-approval for new features.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">Team Leadership</h4>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">Team Leadership</h4>
                   <p>
                     Led full-stack development team using Agile methodologies,
                     implementing structured Jira workflows for issue tracking
                     while strategically delegating tasks based on team strengths
                     and growth opportunities to meet tight client deadlines.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">
                     Client Relationship Management
                   </h4>
                   <p>
@@ -92,11 +94,11 @@ const GloomStudios: React.FC = () => {
                     updates and clearly defined expectations, ensuring alignment
                     between technical development and business goals.
                   </p>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-              <h4 className="font-medium text-blue-800">Key Learning</h4>
+              <h4 className="font-bold text-lg text-blue-800">Key Learning</h4>
               <p className="text-blue-700">
                 Balancing technical excellence with business needs requires
                 clear communication standards and effective delegation
@@ -109,13 +111,13 @@ const GloomStudios: React.FC = () => {
 
       {/* Impact Section */}
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Impact & Results</h3>
+        <h3 className="text-2xl font-bold">Impact & Results</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card className="overflow-hidden">
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">60%</div>
-              <div className="text-lg font-medium mt-2">
+              <div className="text-lg font-semibold mt-2">
                 Reduction in Review Time
               </div>
               <p className="mt-2 text-sm">
@@ -128,7 +130,7 @@ const GloomStudios: React.FC = () => {
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">95%</div>
-              <div className="text-lg font-medium mt-2">
+              <div className="text-lg font-semibold mt-2">
                 Client Satisfaction
               </div>
               <p className="mt-2 text-sm">
@@ -141,7 +143,9 @@ const GloomStudios: React.FC = () => {
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">+40%</div>
-              <div className="text-lg font-medium mt-2">Team Productivity</div>
+              <div className="text-lg font-semibold mt-2">
+                Team Productivity
+              </div>
               <p className="mt-2 text-sm">
                 Increased story point completion per sprint after implementing
                 structured workflows
@@ -150,7 +154,7 @@ const GloomStudios: React.FC = () => {
           </Card>
         </div>
         <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          <h4 className="font-medium mb-2">Lessons Learned</h4>
+          <h4 className="font-bold text-xl mb-2">Lessons Learned</h4>
           <p>
             The most effective technical solutions come from deeply
             understanding the business problem first. Creating structured

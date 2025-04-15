@@ -68,50 +68,58 @@ const WePrintProject: React.FC = () => {
           </div>
           <CardDescription className="flex items-center space-x-1">
             <Users size={16} />
-            <span>Team of 4</span>
+            <span>Team of 3</span>
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div className="space-y-3">
-              <h3 className="font-medium text-lg">Responsibilities</h3>
-              <div className="space-y-4">
-                <div className="space-y-1">
-                  <h4 className="font-medium">Frontend Development</h4>
+              <h3 className="font-bold text-2xl">Responsibilities</h3>
+              <ul className="space-y-4 list-disc pl-5">
+                <li>
+                  <h4 className="font-semibold text-lg">
+                    Frontend Development
+                  </h4>
                   <p>
                     Built responsive user interfaces using NextJS, React, and
                     Fabric.js, focusing on creating an intuitive web-based
                     editor for designing custom print products.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">E-Commerce Integration</h4>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">
+                    E-Commerce Integration
+                  </h4>
                   <p>
                     Implemented MedusaJS e-commerce framework and Stripe payment
                     processing to enable seamless ordering and payment
                     experiences.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">Performance Optimization</h4>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">
+                    Performance Optimization
+                  </h4>
                   <p>
                     Enhanced user experience by implementing skeleton screens
                     and loading states, while optimizing API calls to
                     significantly improve application responsiveness.
                   </p>
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-medium">User Experience Design</h4>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-lg">
+                    User Experience Design
+                  </h4>
                   <p>
                     Collaborated with designers to refine the user journey
                     through the editor, focusing on minimizing UI clutter and
                     maximizing usability based on direct user feedback.
                   </p>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-              <h4 className="font-medium text-blue-800">Key Learning</h4>
+              <h4 className="font-bold text-lg text-blue-800">Key Learning</h4>
               <p className="text-blue-700">
                 Sometimes the most effective technical solutions are the
                 simplest ones. Adding skeleton loading states had more impact on
@@ -124,11 +132,11 @@ const WePrintProject: React.FC = () => {
 
       {/* Project Section */}
       <div className="space-y-4">
-        <h3 className="text-xl font-semibold">Custom Print Editor Platform</h3>
+        <h3 className="text-2xl font-bold">Custom Print Editor Platform</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">The Challenge</CardTitle>
+              <CardTitle className="text-xl font-bold">The Challenge</CardTitle>
             </CardHeader>
             <CardContent>
               <p>
@@ -142,7 +150,7 @@ const WePrintProject: React.FC = () => {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Our Solution</CardTitle>
+              <CardTitle className="text-xl font-bold">Our Solution</CardTitle>
             </CardHeader>
             <CardContent>
               <p>
@@ -151,15 +159,17 @@ const WePrintProject: React.FC = () => {
                 order print products through a streamlined interface with
                 minimal clutter.
               </p>
-              <div className="mt-4">
-                <h4 className="font-medium">Approach</h4>
-                <p>
-                  Adopted a user-centered design approach with rapid prototyping
-                  and testing cycles. Focused on reducing UI complexity while
-                  maintaining full functionality, and implemented strategic
-                  loading states to improve perceived performance.
-                </p>
-              </div>
+            </CardContent>
+            <CardHeader>
+              <CardTitle className="text-xl font-bold">The Approach</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                Adopted a user-centered design approach with rapid prototyping
+                and testing cycles. Focused on reducing UI complexity while
+                maintaining full functionality, and implemented strategic
+                loading states to improve perceived performance.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -167,13 +177,13 @@ const WePrintProject: React.FC = () => {
 
       {/* Impact Section */}
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Impact & Results</h3>
+        <h3 className="text-2xl font-bold">Impact & Results</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card className="overflow-hidden">
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">75%</div>
-              <div className="text-lg font-medium mt-2">
+              <div className="text-lg font-semibold mt-2">
                 Reduced Responsiveness Complaints
               </div>
               <p className="mt-2 text-sm">
@@ -186,7 +196,7 @@ const WePrintProject: React.FC = () => {
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">85%</div>
-              <div className="text-lg font-medium mt-2">
+              <div className="text-lg font-semibold mt-2">
                 API Call Optimization
               </div>
               <p className="mt-2 text-sm">
@@ -199,7 +209,7 @@ const WePrintProject: React.FC = () => {
             <div className="h-2 bg-gradient-to-r from-blue-400 to-blue-600" />
             <CardContent className="pt-6">
               <div className="text-3xl font-bold">-40%</div>
-              <div className="text-lg font-medium mt-2">Cart Abandonment</div>
+              <div className="text-lg font-semibold mt-2">Cart Abandonment</div>
               <p className="mt-2 text-sm">
                 Decrease in cart abandonment rate compared to previous system
               </p>
@@ -207,7 +217,7 @@ const WePrintProject: React.FC = () => {
           </Card>
         </div>
         <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-          <h4 className="font-medium mb-2">Lessons Learned</h4>
+          <h4 className="font-bold text-xl mb-2">Lessons Learned</h4>
           <p>
             User perception is just as important as actual performance metrics.
             The project reinforced that reducing UI complexity and adding
