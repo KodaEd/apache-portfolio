@@ -9,6 +9,7 @@ export const contactItems: Record<string, FileItem> = {
     type: "Directory",
     size: "--",
     lastModified: "Dec 11, 2024",
+    defaultOpen: true,
     children: {
       linkedin: {
         id: "contact/linkedin",

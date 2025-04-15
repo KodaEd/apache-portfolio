@@ -1,3 +1,4 @@
+// Updated file structure for src/data/index.tsx
 import { FileItem } from "@/components/explorer/types";
 import { aboutItems } from "./about";
 import { projectItems } from "./projects";
