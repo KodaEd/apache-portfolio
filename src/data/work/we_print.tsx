@@ -169,10 +169,9 @@ const WePrintProject: React.FC = () => {
         <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
           <h4 className="font-bold text-lg text-blue-800">Lessons Learned</h4>
           <p className="text-blue-700">
-            The most effective technical solutions come from deeply
-            understanding the business problem first. Creating structured
-            processes for both client communication and development workflows
-            pays dividends in both efficiency and project outcomes.
+            Sometimes the most effective technical solutions are the simplest
+            ones. Adding skeleton loading states had more impact on perceived
+            performance than complex backend optimizations.
           </p>
         </div>
       </div>
