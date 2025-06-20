@@ -88,7 +88,7 @@ const SydneyScholarsProject: React.FC = () => {
               Project Mission
             </h4>
             <p className="text-blue-800">
-              Transform Sydney Scholars' manual, email-based reporting system
+              Transform Sydney Scholars&apos; manual, email-based reporting system
               into a streamlined digital platform that automates workflows and
               improves communication between tutors, administrators, and
               parents.
@@ -361,7 +361,7 @@ const SydneyScholarsProject: React.FC = () => {
             <p>
               The emphasis on <strong>comprehensive testing</strong> paid
               dividends - achieving 99% coverage gave both the client and our
-              team confidence in the system's reliability, leading to seamless
+              team confidence in the system&apos;s reliability, leading to seamless
               deployment and immediate user adoption.
             </p>
             <p>

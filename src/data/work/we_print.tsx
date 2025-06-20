@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Calendar, ExternalLink, Users } from "lucide-react";
+import { Calendar, Users } from "lucide-react";
 import Image from "next/image";
 import ProjectImageCarousel from "@/components/ImageCarousel";
 import ProcessFlowSection from "./flow"; // Import the new component
