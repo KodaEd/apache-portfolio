@@ -32,15 +32,6 @@ const WePrintProject: React.FC = () => {
               <p>Printing Services</p>
             </div>
           </div>
-          <a
-            href="https://we-print-frontend-staging.up.railway.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 text-bold text-xl font-bold"
-          >
-            <span>Visit</span>
-            <ExternalLink size={16} />
-          </a>
         </div>
 
         {/* Project Images Carousel */}

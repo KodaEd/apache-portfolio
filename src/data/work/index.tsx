@@ -4,6 +4,7 @@ import { FileItem } from "@/components/explorer/types";
 import ComingSoonStub from "@/components/ComingSoonStub";
 import GloomStudios from "./gloom_studios";
 import WePrintProject from "./we_print";
+import SydneyScholarsProject from "./sydney_scholars";
 
 export const workItems: Record<string, FileItem> = {
   work_experience: {
@@ -43,7 +44,7 @@ export const workItems: Record<string, FileItem> = {
         size: "2.5 KB",
         defaultOpen: true,
         lastModified: "March 15, 2025",
-        content: <ComingSoonStub />,
+        content: <SydneyScholarsProject />,
       },
       cv_medan_mas_karimun: {
         id: "work_experience/cv_medan_mas_karimun",
